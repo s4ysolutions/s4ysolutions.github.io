@@ -1,0 +1,35 @@
+- name: Android development(Kotlin, Composer UI, Coroutines, Gradle)
+  percentage: 90
+  color: danger
+
+- name: Web development (React, RxJS, TypeScript)
+  percentage: 90
+  color: warning
+
+- name: Backend development (Node.js, Golang, Java)
+  percentage: 90
+  color: warning
+
+- name: Cloud computing (Azure, GCP)
+  percentage: 60
+  color: primary
+
+- name: Flutter development (BLoC, Provider)
+  percentage: 60
+  color: danger
+
+- name: Scripting Languages (Python, Lua, R, PHP, Scheme, ActionScript)
+  percentage: 60
+  color: danger
+
+- name: IOS development (Swift, Objective-C)
+  percentage: 30
+  color: secondary
+
+- name: ML (Tensorflow, TF Lite/LiteRT)
+  percentage: 30
+  color: warning
+
+- name: Embedding systems, CGI/FCGI(C++, C)
+  percentage: 30
+  color: secondary
