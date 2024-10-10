@@ -1,0 +1,92 @@
+- title: Android developer
+  from: "2024"
+  to: now
+  description: "For US based company adding to their Android application the new functionality
+               related to the voice recognition and implementing text fusion search according to the recognized
+               speech.<br/><br/>
+               Personal projects:<ul>
+               <li>Матица Српска, Flutter multiplatform mobile & web application for the Serbian
+               language dictionary.</li>
+               <li>Android Proof of Concept Machine Learning (TF Lite) application</li>
+               <li>Smart-contract based e-voting system, architecture planning, Lua-based prototyping</li>
+               </ul>
+               "
+
+- title: C#, WPF developer, Web developer
+  from: "2023"
+  to: "2024"
+  description: "For Serbia based Microsoft partner company, developing a desktop WPF application for the management of
+               the datacenters infrastructure.<br/><br/>
+               For US based company migrating Android application to Composer UI and Coroutines.<br/><br/>
+               Personal projects:<ul>
+               <li>Upgrading iTag and WayToday android applications to the Android 15 (35 API level)
+               and refactoring the codebase to the modular architecture
+               <li>Gradle Plugin to use Google Service outside of :app module</li>
+               <li>Android Proof of Concept OSM/Mapsforge/VTM Application</li>
+               <li>Web-Application (React) for Serbian Language Grammar training</li>
+               </li>
+               </ul>
+               "
+
+- title: Software engineer, DevOps, Full-stack developer, Android/iOS developer
+  from: "2021"
+  to: "2023"
+  description: "For Russia/Serbia based Microsoft partner company, supporting GitHib Actions and AzDevOps infrastructure.
+               Maintenance of a suite of GitHub Actions, as well as the development and maintenance
+               of CI/CD pipelines for building, testing, and deploying Azure DevOps images to virtual
+               environments. This includes provisioning and configuring tools for mobile development,
+               ensuring they are correctly set up and capable of building any real-world Android and
+               iOS applications, including those built with Xamarin and React Native.<br/><br/>
+               
+               For US based company developing the UI reach, Firebase backend Android and iOS applications 
+               for learning Arabic Language; React Admin panel; Grale plugin to generate Folatbuffer assets.<br/><br/>
+               
+               For EU based company node.js GraphQL microservice for they crypto-currency exchange with Graphana 
+               monitoring.<br/><br/>
+               
+               Personal projects:<ul>
+               <li>iTAG, Android and iOS applications to control BLE-managed gadget</li>
+               <li>WayToday, Android and iOS applications, JS Web-frontend and GoLang Backend for GPS tracking
+               service with ZeroMQ, Websocket, gRPC networking</li>
+               <li>Webpack starter for React, TypeScript, Mocha, ES6 modules</li>
+               </ul>
+               "
+
+- title: Android/iOS developer, Full-stack developer, DevOps
+  from: "2017"
+  to: "2021"
+  description: "For Microsoft partner company, supporting MS AppCenter, Xamarin TestCloud infrastructure.
+               Development and maintenance of the React/MobX frontend and Node.js/Express backend for the MS AppCenter.
+               Development and maintenance of Android/iOS applications used for testing and evaluating MS AppCenter and
+               Xamarin TestCloud. Tracking changes introduced with each release of Xcode, Xamarin and Android SDK.
+               Maintenance CI/CD pipelines for the MS AppCenter and Xamarin TestCloud.<br/><br/>
+               Personal projects:<ul>
+               <li>Map2.online - React web application for travel planning</li>
+               <li>Map2.mobile - Android GPS Navigator with Off-road specific features</li>
+               </ul>
+               "
+
+- title:  Full-stack developer, Mobile developer, DevOps, Project manager
+  from: "2010"
+  to: "2017"
+  description: "Self-employed, developing Web-sites, web- and mobile applications for the clients from the USA, EU
+               and Russia. Managing the team of the developers.<br/><br/>
+               <ul>
+               <li>Android application parsing, downloading and off-line playing Internet radio-stations</li>
+               <li>Android application for remote control TP-Link router by parsing HTML UI and sending
+               HTTP requests</li>
+               </ul>
+               "
+
+- title: Java developer, z/OS HLASM developer, Mobile developer, Project manager
+  from: "2010"
+  to: "2007"
+  description: "For IBM partner company, developing the Jira-plugins for in-house use. Migrated inherited z/OS Assembler
+                code to Java. Developed the CGI/FCGI applications for the IBM mainframe.<br/><br/>
+               Personal projects:<ul>
+               <li>Symbian and Windows Mobile English Pronunciation Training Applications</li>
+               <li>Guile bindings for Oracle 8 database</li>
+               <li>Guile library for HTML templating</li>
+               <li>Linux driver for TV-tuner card</li>
+               </ul>
+               "

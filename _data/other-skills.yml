@@ -1,0 +1,33 @@
+
+- name: Test Automation (JUnit/Junit5, Mockito, Mocha, Chai, Jest, etc)
+  percentage: 90
+  color: success
+
+- name: DevOps (GitHub Actions, Bitbucket Pipelines, Azure DevOps)
+  percentage: 90
+  color: success
+#  color: info
+
+- name: OSes (Unix, MacOS, Shell Scripting)
+  percentage: 90
+  color: success
+
+- name: Containers (Docker, Docker composer, K8s)
+  percentage: 90
+  color: info
+
+- name: Documentation (UML, C4, LaTeX, Markdown)
+  percentage: 90
+  color: info
+
+- name: Teamwork (Git, Jira, Azure DevOps, YouTrack)
+  percentage: 90
+  color: info
+
+- name: Databases (SQL, NoSQ)
+  percentage: 80
+  color: info
+
+- name: Project Management (PMBOK, Scrum, XP)
+  percentage: 60
+  color: secondary
