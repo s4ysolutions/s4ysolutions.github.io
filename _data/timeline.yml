@@ -20,7 +20,7 @@
                For US based company migrating Android application to Composer UI and Coroutines.<br/><br/>
                Personal projects:<ul>
                <li>Upgrading iTag and WayToday android applications to the Android 15 (35 API level)
-               and refactoring the codebase to the modular architecture
+               and refactoring the codebase to the modular architecture</li>
                <li>Gradle Plugin to use Google Service outside of :app module</li>
                <li>Android Proof of Concept OSM/Mapsforge/VTM Application</li>
                <li>Web-Application (React) for Serbian Language Grammar training</li>
