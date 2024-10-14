@@ -1,3 +1,6 @@
+.navbar {
+}
+
 .link-after {
   content: "";
   display: block;
@@ -32,4 +35,12 @@
   &::after {
     margin-top: -0.25em;
   }
+  /*
+ background-image: url('/assets/images/logo1.png');
+ background-repeat: no-repeat;
+ background-position: left top;
+ background-size: auto 90%;
+
+  padding-left: 65px;
+*/
 }
