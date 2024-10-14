@@ -29,7 +29,7 @@ Test Automation Engineer for Android applications.
 For projects with limited budgets, I can work as a solo developer during the development phase,
 with the option to bring in a replacement developer or hire part-time for the maintenance phase.
 
-Additionally, I had good experience working with legacy codebases lacking the dockumentation and
+Additionally, I had good experience working with legacy codebases lacking the documentation and
 can help with refactoring and modernization of such projects.
 
 ## Salary expectations
@@ -40,7 +40,7 @@ experience.
 
 A Middle Kotlin Backend Developer position is also possible.
 
-Additionally, I want to enhance my experience as a GoLang backend developer and am willing to work
+Additionally, I want to enhance my experience as a GoLang backend developer, and I am willing to work
 in a Junior Developer position for up to one year.
 
 ## Availability
