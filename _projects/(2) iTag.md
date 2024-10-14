@@ -1,8 +1,8 @@
 ---
-name: The Movies Project
-tools: [C#, XML, WPF]
-image: https://www.sketchappsources.com/resources/source-image/movie-badges-jurajjurik.png
-description: This project has an individual showcase page, not just a direct link to the project site or repo. Now you have more space to describe your awesome project!
+name: iTag
+tools: [Android, Bluetooth, GPS, Gradle artifacts, Java]
+image: /assets/images/itag-screen.jpg
+description: iTag is an Android application that connects to a Bluetooth gadget for tracking the user’s belongings.
 ---
 
 # The Movies Project

@@ -12,11 +12,13 @@ creating mobile, desktop and web applications with complex business logic, a mod
 interacting with network infrastructure through various protocols.
 
 Proficient in both lead and developer roles, with a proven ability to collaborate within teams and
-manage the full project lifecycle, including CI/CD integration and long-term support.
+manage the full project lifecycle, including planning, CI/CD integration and long-term support.
 
 I founded **S4Y Solutions** as a company specializing in B2B software development contracts. It also
 serves as an umbrella brand for publishing applications developed independently, not tied to
 specific clients.
+
+[Job Readiness]({{ site.baseurl }}{{ '/blog/job-readiness' | relative_url }})
 
 <div class="row">
 {% include about/skills.html title="Programming Skills" source=site.data.programming-skills %}
