@@ -2,9 +2,11 @@
 layout: post
 title: "Job readiness"
 date: 2024-09-10 12:27:55 +0200
-categories: job
+tags: [Job]
+style: fill
+color: secondary
+comments: true
 ---
-
 ## Preferences
 
 I prefer project-based work, where the goals and completion criteria are clearly defined,
@@ -51,3 +53,5 @@ In the moment of writing this document, I am available for a new job.
 
 Feel free to reach out to me using any of the links at the bottom of the page. I am open to discussing opportunities
 and can provide my CV upon request.
+
+![Job Readiness](/assets/images/job-readiness.png)
