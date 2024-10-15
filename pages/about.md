@@ -25,6 +25,9 @@ specific clients.
 {% include about/skills.html title="Other Skills" source=site.data.other-skills %}
 </div>
 
+<i><sup>\*</sup> - percents correspond to level</i><br/>
+<i><sup>\*\*</sup> - colors correspond to relevance</i>
+
 # Experience Timeline
 <div class="row">
 {% include about/timeline.html %}
