@@ -1,0 +1,45 @@
+\documentclass[tikz]{standalone}
+
+\usepackage{tikz-uml}
+\usetikzlibrary{positioning}
+
+\begin{document}
+    \begin{tikzpicture}
+        \begin{umlpackage}{iterable}
+            \umlclass[type=interface, template={out T}]{Iterable}{}{
+                operator iterator(): Iterator
+            }
+        \end{umlpackage}
+
+        \begin{umlpackage}{collections}
+            \umlclass[type=interface, below=1 of Iterable.south, template={out T}]{Collection}{}{
+            }
+            \umlinherit{Collection}{Iterable}
+            \umlclass[type=interface, anchor=north, below left=1 and 1 of Collection.south west, template={out T}]{List}{}{
+            }
+            \umlVHVinherit{List}{Collection}
+            \umlclass[type=interface, below=1 of Collection.south, template={out T}]{Set}{}{
+            }
+            \umlinherit{Set}{Collection}
+            \umlclass[type=interface, below right=1 and 1 of Collection.south east, template={out T}]{Map}{}{
+            }
+            \umlVHVinherit{Map}{Collection}
+        \end{umlpackage}
+
+        \begin{umlpackage}{sequences}
+            \umlclass[type=interface, below right=-3 and 4cm of Map.south east, anchor=south, template={out T}]{Sequence}{}{
+                operator iterator(): Iterator<T> \\
+            }
+        \end{umlpackage}
+
+        \begin{umlpackage}{iterable}
+            \umlclass[type=interface, above right=2 and -2 of Sequence.north west, template={out T}]{Iterator}{}{
+                \textit{fun <T> asSequence(): Sequence<T>}\\
+            }
+        \end{umlpackage}
+
+        \umlHVHuniassoc[anchors=-20 and 175]{Iterable}{Iterator}
+        \umluniassoc[anchors=-15 and 34, geometry=-|]{Iterator}{Sequence}
+        \umluniassoc[anchors=198 and 207, geometry=-|]{Sequence}{Iterator}
+    \end{tikzpicture}
+\end{document}
