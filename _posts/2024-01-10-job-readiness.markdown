@@ -35,7 +35,7 @@ can help with refactoring and modernization of such projects.
 ## Salary expectations
 
 Given the tough job market, I need to be realistic about my salary expectations and remain open
-to the position of Middle Android Developer(Kotlin/Flutter) despite my Senior Software Developer
+to the position of Middle Android Developer (Kotlin/Flutter) despite my Senior Software Developer
 experience.
 
 A Middle Kotlin Backend Developer position is also possible.
