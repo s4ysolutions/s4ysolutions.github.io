@@ -1,0 +1,64 @@
+---
+layout: post
+title: "Localization in JavaScript"
+date: 2024-10-21 09:48:55 +0200
+tags: [JavaScript]
+style: fill
+color: secondary
+comments: false
+---
+
+I’m astonished that, till now, there's no standard way to localize JavaScript applications and
+the existing solutions are either too complex or hard to use while since the JS received
+string interpolation in ES6, it's a plain to see that the obvious way is:
+
+```javascript
+console.log(T`Hello, World!`);
+```
+
+where `T` is a function that takes a string and returns the localized version of it.
+
+With the translation dictionary like this:
+```javascript
+const translation = {
+  'en': {
+    // 'Hellow, World': 'Hello, World!', we do not need it in English(default locale)
+    [Some.Enum]: '1st.',
+    ...
+  },
+  'ru': {
+    'Hellow, World': 'Привет, Мир!',
+    [GrammarPerson.FIRST]: '1-й',
+  },
+  'sr': {
+    'Hellow, World': 'Здраво, Свете!',
+    [GrammarPerson.FIRST]: '1.',
+  },
+};
+
+export default translation;
+```
+
+The `T` function can be implemented like this:
+```javascript
+const T = (string) => {
+  const locale = 'ru'; // get it from the user's preferences
+  return translation[locale][string] || string;
+};
+```
+
+In my [Serbian Grammar Trainer](https://srpska-gramatika.web.app) (React), I
+[used](https://github.com/s4ysolutions/srpska-gramatika/blob/c4d59638275678651415f1b9d2c6930f45d0e2fb/src/l10n/index.ts#L58C1-L63C21)
+a bit complex code that allows nested templates and string interpolation, but the idea is the same:
+
+```javascript
+
+```kotlin
+const l10n = (strings: TemplateStringsArray, ...values: string[]): string => {
+  const r = strings.reduce((prevString: string, nextString: string, index: number) => prevString + (index > 0 ? values[index - 1] : '') + nextString, '');
+  return translate(r);
+};
+
+export default l10n;
+```
+
