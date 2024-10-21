@@ -1,0 +1,42 @@
+\documentclass[tikz]{standalone}
+\usepackage{fontspec}
+\usepackage{tikz-uml}
+\usetikzlibrary{positioning}
+
+\setmainfont{Arial}
+
+\begin{document}
+    \begin{tikzpicture}
+        \begin{umlpackage}{collections}
+            \umlclass[
+                type=interface,
+                template={out T}]
+            {Iterable}{}{
+                operator iterator(): Iterator
+            }
+
+            \umlclass[
+                type=interface,
+                above right=0 and 1 of Iterable.south east,
+                template={out T}]
+            {Iterator}{}{
+                \textit{fun <T> asSequence(): Sequence<T>}\\
+            }
+
+            \umlHVHuniassoc[anchors=-20 and 175, weight=0.43]{Iterable}{Iterator}
+        \end{umlpackage}
+
+        \begin{umlpackage}{sequences}
+            \umlclass[
+                type=interface,
+                above left=1.5cm and -0cm of Iterator.north east,
+                template={out T}]
+            {Sequence}{}{
+                operator iterator(): Iterator<T> \\
+            }
+        \end{umlpackage}
+
+        \umluniassoc[anchors=190 and 155, geometry=-|]{Sequence}{Iterator}
+        \umluniassoc[anchors=-15 and 10, geometry=-|-, arm1=1.2]{Iterator}{Sequence}
+    \end{tikzpicture}
+\end{document}

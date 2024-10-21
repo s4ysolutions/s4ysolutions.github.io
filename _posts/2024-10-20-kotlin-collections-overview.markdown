@@ -6,7 +6,7 @@ tags: [Kotlin]
 style: fill
 color: secondary
 comments: false
+draft: true
 ---
-## Preferences
 
-![Preferences](/assets/images/kotlin-collections-cheatsheet/overview.svg)
+<img src="/assets/images/kotlin-collections-cheatsheet/overview.svg" alt="Overview" style="width: 100%;"/>
