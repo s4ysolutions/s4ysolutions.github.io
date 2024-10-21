@@ -8,9 +8,7 @@ color: secondary
 comments: false
 ---
 
-I’m astonished that, till now, there's no standard way to localize JavaScript applications and
-the existing solutions are either too complex or hard to use while since the JS received
-string interpolation in ES6, it's a plain to see that the obvious way is:
+I’m astonished that, even now, there is no standard way to localize JavaScript applications. The existing solutions are either too complex or difficult to use, especially since JavaScript received string interpolation in ES6. It’s plain to see that the obvious approach is:
 
 ```javascript
 console.log(T`Hello, World!`);
