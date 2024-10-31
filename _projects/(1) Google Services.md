@@ -1,6 +1,6 @@
 ---
 name: Google Services for Library
-tools: [Android, Firebase, Google Services, Gradle Plugin, Kotlin, Tooling]
+tools: [Android, Gradle Plugin, Firebase, Google Services, Kotlin, Tooling]
 image: /assets/images/gradle.jpg
 description: >-
     Gradle plugin similar to Google Services plugin, but for libraries. Its primary goal is to

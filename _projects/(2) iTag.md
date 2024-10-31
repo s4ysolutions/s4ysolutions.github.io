@@ -1,6 +1,6 @@
 ---
 name: iTag
-tools: [Android, Bluetooth, GPS, Gradle artifacts, Java]
+tools: [Android, Bluetooth, GPS, Gradle Artefacts, Java]
 image: /assets/images/itag-screen.jpg
 description: iTag is an Android application that connects to a Bluetooth gadget for tracking the user’s belongings.
 ---
