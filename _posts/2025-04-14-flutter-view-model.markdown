@@ -187,7 +187,7 @@ Like Android Compose UI the suggested implementation of `ViewModelWidget` tracks
 the view models of the same class and creates the new instances only one reusing them on the
 sequential factory method calls.
 
-## The reference implementation
+## The suggested implementation
 
 Due to its simplicity, I prefer to keep the entire source code snippet in a single file that I
 can copy from one project to another, rather than creating a full library or package. Since the
