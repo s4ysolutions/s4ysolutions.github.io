@@ -164,6 +164,9 @@ extension FeatureViewModelExtension on BuildContext {
       viewModel<AuthorizationViewModel>();
 }
 ```
+```dart
+final vm = context.authorizationViewModel;
+```
 
 ## Conclusion
 
