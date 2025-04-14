@@ -99,11 +99,11 @@ class FeatureViewModel implements ViewModelWithInit, ViewModelWithDispose {
 }
 ```
 
-These `Init` and `Dispose` are trivial methods what do not need any explanation. But there's the 
-3rd `providers` getter which is a bit more interesting.
-
+These `Init` and `Dispose` are trivial methods what do not need any explanation.
 With them, it becomes possible to subscript to the streams, websockets, queues, etc. on demand 
 and unsubscribe as soon as the widget goes out of the scope.
+
+But there's the 3rd `providers` getter which is a bit more interesting.
 
 ##  Provide
 
