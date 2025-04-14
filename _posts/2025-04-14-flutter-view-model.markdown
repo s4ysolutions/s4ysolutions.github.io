@@ -36,10 +36,10 @@ life cycle of the widgets and this is a real core of the whole approach.
 The `build` method passing the `viewModel` as a parameter is a convenient way to
 get the reference to the created view model instance.
 
-The `factory` argument of the `ViewModelWidget` constructor obviously is supposed to
-be called on demand to create the instance. Being learned горький урок from Android's
-view models experience, I intentionally avoided attempts to deduce the factories method
-and decided to make it explicit. 
+The `factory` argument of the `ViewModelWidget` constructor is, of course, intended to be called on
+demand to create the instance. Having learned a bitter lesson from Android’s ViewModel experience,
+I intentionally avoided trying to deduce the factory method automatically and instead decided
+to make it explicit.
 
 The expected use of the view model pattern here is we can gather the
 methods and properties that are needed by a widget in the `viewModel` class and access then as easy
