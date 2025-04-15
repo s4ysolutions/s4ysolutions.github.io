@@ -22,7 +22,7 @@ So, without further ado, here we go.
 
 ```dart
 class Feature extends ViewModelWidget<FeatureViewModel> {
-  const Authorization({super.key, factory = FeatureViewModel.factory});
+  const Feature ({super.key, factory = FeatureViewModel.factory});
       : super(factory: factory);
 
   @override
