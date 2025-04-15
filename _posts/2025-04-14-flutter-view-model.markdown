@@ -124,7 +124,7 @@ Second it is nothing but just a wrapper around the `MultiProvider.providers` and
 add the services to the context down to the hierarchy of the widgets started from the `ViewModelWidget`
 instance.
 
-Here the 3rd use: locally scoped services - no app lifetime services anymore.
+Here the 3rd use: locally scoped services - no app lifetime singletons anymore.
 
 ## Special case: streamed data
 
@@ -148,7 +148,7 @@ class FeatureViewModel implements ViewModelWithDispose {
 ```
 
 ```dart
-class Feature extends StatelssWidget {
+class FeatureOrItsChild extends StatelssWidget {
 
   @override
   Widget build(BuildContext context) {
