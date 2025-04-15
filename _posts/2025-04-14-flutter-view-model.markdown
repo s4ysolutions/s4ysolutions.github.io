@@ -30,7 +30,7 @@ class Feature extends ViewModelWidget<FeatureViewModel> {
 ```
 
 This is how the view model assumed to be instantiated and used.
-`ViewModelWidget` extends `StatelessWidget` in order to get access to the
+`ViewModelWidget` extends `StatefulWidget` in order to get access to the
 life cycle of the widgets and this is a real core of the whole approach.
 
 The `build` method passing the `viewModel` as a parameter is a convenient way to
@@ -125,6 +125,41 @@ add the services to the context down to the hierarchy of the widgets started fro
 instance.
 
 Here the 3rd use: locally scoped services - no app lifetime services anymore.
+
+## Special case: streamed data
+
+I am used to working with streams and reactive programming, actually "every value is a stream" but
+they require careful subscription and un-subscription. Fortunately, the `provider` package
+handles this for us and all we need to do is to provide the stream to the context.
+
+```dart
+class FeatureViewModel implements ViewModelWithDispose {
+  // Put the stream into the build context within the scope of the 
+  // widgets that use it and leverage `provider`'s power
+  // to manage the subscription and updates
+ @override
+ List<SingleChildWidget> get providers => [
+  StreamProvider<FeatureRelatedType>(
+          create: (_) => _featureProvider.stream,
+          initialData: _featureProvider.currentValue),
+   /// ...
+ ];
+}
+```
+
+```dart
+class Feature extends StatelssWidget {
+
+  @override
+  Widget build(BuildContext context) {
+    final value = Provider.of<FeatureRelatedType>(context);
+    ...
+  }
+}
+```
+Pay attention the widget does not refer to the view models at all - it just expect the needed data
+in the context in the same way as if they were put into DI container any other framework. The
+view model plays a role of a "scoped DI container".
 
 ## Access the view model instance
 
