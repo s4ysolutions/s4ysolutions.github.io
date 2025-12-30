@@ -7,15 +7,14 @@ style: fill
 color: secondary
 comments: false
 ---
-[Part 2](2025-12-30-expression-problem-tagless_final-java-2.md)
-
 ## Theory: The expression problem
 
-Open to add kinds and operations without modifying existing code, with static(compile time) guarantees.
+The expression problem asks: how can we add new data types (kinds) and new operations
+on those types without modifying existing code, while maintaining static type safety?
 
 ## Practice: The real world problem of the extensible filesystem objects
 
-We have filesystem objects:
+Let's have filesystem objects:
 
 Kinds (variants, types, java classes):
 
@@ -93,7 +92,7 @@ interface FsObject {
 }
 ```
 
-and the worse `TextObj` cannot execute, so either throw exception:
+and even worse `TextObj` cannot execute, so either throw exception:
 
 ```java
 final class TextObj implements FsObject {
@@ -354,4 +353,7 @@ evaluate directly to final results, rather than to intermediate representations
 (such as ASTs, as used in some JSON frameworks that preserve an intermediate structure after parsing
 and before producing the target value). Using intermediate representations would require an additional
 interpretation step, which this approach avoids (while still allowing them).
-[Part 2](2025-12-30-expression-problem-tagless_final-java-2.md)
+
+
+
+[Part 2](expression-problem-tagless_final-java-2)

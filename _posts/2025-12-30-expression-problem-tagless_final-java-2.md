@@ -7,11 +7,9 @@ style: fill
 color: secondary
 comments: false
 ---
-[Part 1](2025-12-28-expression-problem-tagless_final-java.md)
-
 ## Practice: constructing FsObject kinds inside the programs
 
-In the part 1, we instantiated the FsObject kinds with the `new` keyword directly and then
+In the previous part, we instantiated the FsObject kinds with the `new` keyword directly and then
 pass to the programs as a parameter, but what if we want to create them inside the programs?
 
 The answer is to have an interface that defines the constructors for each kind:
@@ -60,7 +58,7 @@ in the pattern matching `switch` statements for example.
 ## Theory: Algebras and interpreters
 
 From the high-school math perspective (extremely zoomed out), a set of operations defined on a certain set
-forms an algebraic structure called an algebra. Treating Java classes as sets of values and
+forms an algebraic structure called an algebra. Treating Java classes as set of `.class` types and
 looking back at the examples above, we can see that the interface methods define operations
 that transform values from some Java classes to other Java classes (or the same class),
 thus forming an algebra.
@@ -76,4 +74,5 @@ When a program uses algebra interface(s), it calls methods on a concrete impleme
 interprets the program logic in a specific way. This is why concrete implementations of algebra
 interfaces are called interpreters in the same functional programming jargon.
 
-[Part 1](2025-12-28-expression-problem-tagless_final-java.md)
+
+[Part 1](expression-problem-tagless_final-java)
