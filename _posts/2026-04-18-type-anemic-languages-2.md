@@ -2,56 +2,52 @@
 layout: post
 title: "Type Strength vs Type Anemia: a Missing Dimension in Static Typing"
 date: 2026-04-18 10:00:00 +0000
-tags: [ Type Systems, Java, Kotlin, Scala, Haskell ]
+tags: [ Type Systems, Java, Kotlin, Scala, Haskell, AI ]
 style: fill
 color: secondary
 comments: false
 ---
+## A Missing Dimension in Typing
 
-## A missing dimension in typing
+Besides statically typed, dynamically typed, or untyped languages, there is another important dimension.
+A language can be statically typed and still fail to enforce types as a real compile-time constraint.
 
-Besides statically typed, dynamically typed, or untyped languages, there is another dimension.
-A language may be statically typed, yet still not enforce types as a real compile-time constraint.
+The easiest way to understand this idea is with a simple example.
 
-The easiest way to understand the idea is this sample.
+Imagine a service that integrates with a third-party system storing user data by email.
+The external system must not receive raw email addresses because they are personal data.
 
-Assume a service integrates with a third-party system that stores user data identified by email.
-The external system must not receive raw email addresses, since they are considered personal data.
+The correct approach is straightforward: use a hashed external identifier instead of the raw email.
 
-The intended approach is simple: use an external identifier instead of
-email `externalId = hash(email)`
+`externalId = hash(email)`
 
-But both _email_ and _externalId_ are represented as `String`. Nothing prevents a developer
-from accidentally passing an email to the external system instead of the hashed identifier <sup>*</sup>.
+However, both `email` and `externalId` are usually represented as `String`. Nothing stops a developer
+from accidentally passing the raw email to the external system instead of the hashed value.<sup>*</sup>
 
+For a Haskell or Scala developer, this problem is usually easy to solve. It is common to create
+separate types for `Email` and `ExternalId` (using `newtype` in Haskell or opaque types in Scala 3).
+This makes the mistake impossible at compile time. Reusing a raw `String` for both concepts is often
+seen as a design smell in these ecosystems.
 
-For a Haskell or Scala developer, this case is usually straightforward. It is common to define
-separate types for `Email` and `ExternalId`, and then the mistake becomes impossible at
-compile time. In these ecosystems, reusing raw `String` for both is often treated as a
-design smell.
+Experienced Kotlin developers can (and should) use **value classes** for this kind of separation. It is a
+well-known feature in the language, and using it is often expected once the concept is understood.
 
-Experienced Kotlin developers can and should use inline/value types for this kind of separation.
-It is a known tool in the language, and its use in cases like this is often expected once
-the concept is understood.
+In Java, the traditional approach is still to use `String` for both. It is possible to wrap them in
+domain-specific classes, but the language has not strongly encouraged this style historically. Even
+when developers wanted stronger typing, there was no lightweight mechanism available, so people have
+to use full class wrappers — which come with extra memory allocation and garbage collection overhead.
 
-In Java, the default approach is still to keep both as `String`. Wrapping them into domain types
-is possible, but historically the language has not pushed strongly toward this style of modeling.
-Even when developers want stronger typing, current Java versions offered no lightweight
-mechanism for it, and the common alternative was full class wrappers with additional
-allocation and GC overhead.
+These three approaches show very different levels of type enforcement for the same problem. The
+difference comes from how easily a language lets you create distinct domain types without runtime cost.
 
-Across these examples, the same idea produces different levels of type enforcement depending
-on how easily a language supports distinct domain types.
+This is not just a theoretical curiosity. It becomes especially relevant in the AI era. Code suggested by AI
+agents still needs careful human review — generated code cannot be trusted by default.
 
-Why it is not just a curiosity but becomes relevant in the AI era is that code suggested by agents
-still requires thorough review. In general, generated code cannot be trusted by default.
-When primitives are used for semantically different concepts, the reviewer’s mental load increases:
-meaning must be reconstructed from context rather than carried by the type system.
-This also increases the chance of overlooking mistakes or accepting incorrect assumptions produced by the model.
+When primitives like `String` are used for semantically different concepts, the reviewer’s mental load increases.
+Meaning must be reconstructed from context instead of being clearly expressed by the type system.
+This raises the chance of missing mistakes or accepting wrong assumptions from the model.
 
-With languages that have stronger type systems, part of this burden is shifted away from review. The compiler
-enforces boundaries, and the model itself receives clearer signals about intended usage.
-In the worst case, the type system adds an additional compile-time check
-that catches misuse before it reaches runtime.
+Languages with stronger support for distinct domain types shift part of this burden away from the reviewer. The compiler enforces the boundaries, and the AI model itself gets clearer signals about the intended usage. In the best case, the type system adds a compile-time check that catches misuse before it ever reaches runtime.
+
 ---
-<sup>*</sup> *despite the probability being low, the impact is high enough that it should be avoided*
+<sup>*</sup> *Even if the probability of the mistake is low, the impact is high enough that it should be prevented.*
